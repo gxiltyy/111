@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>silence - Bio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚫</text></svg>">
+</head>
+<body>
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <div class="entry-page" id="entry-page">
+        <div class="entry-container">
+            <div class="entry-text" id="entry-button">
+                Click to Enter
+            </div>
+        </div>
+    </div>
+
+    <audio id="background-music" loop preload="auto">
+        <source src="Kitchen Stove.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'audio HTML5.
+    </audio>
+
+    <div class="audio-control" id="audio-control">
+        <i class="fas fa-volume-up" id="audio-icon"></i>
+    </div>
+
+    <div class="main-site" id="main-site" style="display: none;">
+        <div class="particles-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="ambient-overlay"></div>
+        
+        <div class="main-container">
+            <div class="widgets-section">
+                <div class="widget discord-widget">
+                    <div class="widget-header">
+                        <div class="widget-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <span class="widget-title">Discord</span>
+                        <div class="status-indicator" id="discord-status-dot"></div>
+                    </div>
+                    <div class="widget-content">
+                        <div class="discord-profile">
+                            <div class="avatar-container">
+                                <img id="discord-avatar" src="" alt="Discord Avatar" class="avatar">
+                                <div class="status-badge" id="discord-status"></div>
+                            </div>
+                            <div class="profile-info">
+                                <span class="username" id="discord-username">Loading...</span>
+                                <div class="activity" id="discord-activity">
+                                    <span class="activity-text">Offline</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="widget spotify-widget">
+                    <div class="widget-header">
+                        <div class="widget-icon">
+                            <i class="fab fa-spotify"></i>
+                        </div>
+                        <span class="widget-title">Spotify</span>
+                        <div class="playback-status">
+                            <div class="play-indicator" id="spotify-playing"></div>
+                        </div>
+                    </div>
+                    <div class="widget-content">
+                        <div class="spotify-info">
+                            <div class="track-details">
+                                <span class="track-name" id="spotify-track">Not playing</span>
+                                <span class="artist-name" id="spotify-artist">-</span>
+                            </div>
+                            <div class="album-container">
+                                <img id="spotify-album" src="" alt="Album Art" class="album-art">
+                            </div>
+                        </div>
+                        <div class="progress-container" id="spotify-progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="spotify-progress"></div>
+                            </div>
+                            <div class="time-info">
+                                <span class="current-time" id="current-time">0:00</span>
+                                <span class="total-time" id="total-time">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-section">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img id="main-avatar" src="" alt="c" class="main-avatar-img">
+                            <div class="avatar-border"></div>
+                        </div>
+                        
+                        <div class="profile-details">
+                            <h1 class="display-name">
+                                <span class="name-text">guilty</span>
+                            </h1>
+                            
+                            <div class="bio-section">
+                                <p class="bio-text">
+                                    <span class="typing-text">made by @692._.</span>
+                                    <span class="cursor-blink">|</span>
+                                </p>
+                            </div>
+                            
+                            <div class="status-info">
+                                <div class="status-dot" id="main-status-dot"></div>
+                                <span class="status-text" id="main-status-text">Available for projects</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <div class="social-links">
+                        <div class="links-grid">
+                            <a href="#" class="social-link" data-link="guilty" data-platform="Discord">
+                                <div class="link-icon">
+                                    <i class="fab fa-discord"></i>
+                                </div>
+                                <span class="link-label">Discord</span>
+                                <div class="link-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+
+                            <a href="#" class="social-link" data-link="https://github.com/gxiltyy" data-platform="GitHub">
+                                <div class="link-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <span class="link-label">GitHub</span>
+                                <div class="link-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+
+                            <a href="#" class="social-link" data-link="https://open.spotify.com/user/31bsw7mrxqhnhfeevod5gi3snqmi" data-platform="Spotify">
+                                <div class="link-icon">
+                                    <i class="fab fa-spotify"></i>
+                                </div>
+                                <span class="link-label">Spotify</span>
+                                <div class="link-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+
+                            <a href="#" class="social-link" data-link="discordlookup.com/user/1050643297527418910" data-platform="Email">
+                                <div class="link-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <span class="link-label">Contact</span>
+                                <div class="link-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer">
+                        <div class="footer-content">
+                            <div class="copyright">
+                                <i class="fas fa-code"></i>
+                                <span>© Spoofing Since 1962</span>
+                            </div>
+                            <div class="last-seen">
+                                <i class="fas fa-clock"></i>
+                                <span id="last-seen">Last seen: calculating...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
